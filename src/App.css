@@ -1,0 +1,127 @@
+.App {
+  text-align: center;
+}
+.App-header {
+  height: 4rem;
+  align-items: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  display: flex;
+  border-bottom: 2px solid black;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+}
+.App-logo {
+  height: 70%;
+}
+.Products-container {
+  padding: 2rem 6rem;
+  /* overflow-anchor: none; */
+}
+.Products-lists {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  column-gap: 1.5rem;
+  row-gap: 1.5rem;
+}
+.Product-item-container {
+  border: 1px solid rgb(240, 240, 240);
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  /* background-color: burlywood; */
+}
+.Product-image-container {
+  height: 160px;
+  width: 178px;
+  background-color: rgb(240, 240, 240);
+}
+.Product-image {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+}
+.Product-details {
+  width: 178px;
+  /* background-color: coral; */
+  margin-top: 0.5rem;
+}
+.Product-details > p {
+  font-size: 0.75rem;
+  color: rgb(102, 102, 102);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 5px 0;
+  /* font-weight: bold; */
+}
+.Product-details > p > span {
+  /* background-color: red; */
+  margin-right: 0.25rem;
+  word-wrap: break-word;
+  word-break: keep-all;
+  color: rgb(90, 90, 90);
+  font-weight: 700;
+}
+.Scroll-container {
+  background-color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 1px 4px 0px;
+  border: none;
+  position: fixed;
+  bottom: 10%;
+  right: 2rem;
+  height: 4rem;
+  width: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.Scroll-container > img {
+  height: 60%;
+}
+.SearchBar {
+  height: 3rem;
+  width: 80%;
+  margin: 2rem 0 0 0;
+  padding: 0 1rem;
+  font-size: 1rem;
+}
+@media only screen and (max-width: 640px) {
+  .App-header {
+    justify-content: center;
+  }
+  .Products-lists {
+    grid-template-columns: repeat(auto-fill, minmax(166px, 1fr));
+    column-gap: 0.75rem;
+    row-gap: 0.75rem;
+  }
+  .Products-container {
+    padding: 2rem 2rem;
+  }
+  .Scroll-container {
+    bottom: 30%;
+    right: 2rem;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .Products-lists {
+    grid-template-columns: repeat(auto-fill, minmax(166px, 1fr));
+    column-gap: 0;
+    row-gap: 0.75rem;
+  }
+  .Products-container {
+    padding: 1.5rem 0.75rem;
+  }
+  .Product-image-container {
+    height: 160px;
+    width: 166px;
+  }
+  .Product-details {
+    width: 166px;
+  }
+}
